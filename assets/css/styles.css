@@ -16,6 +16,7 @@ div.Question {
   border-bottom: 3px solid #962206;
   display: inline-block;
   font-size: 22px;
+  font-weight: bold;
 }
 
 .card-header {
@@ -42,11 +43,13 @@ textarea.form-control {
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: black;
   background-color: transparent;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .nav-pills .nav-link {
   font-family: 'Lora';
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .nav.nav-pills {
@@ -62,5 +65,58 @@ textarea.form-control {
 
 .nav-link.hover, .nav-link:hover {
   color: #000000;
+}
+
+.nav-link.active:before {
+  background-color: #962206;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  z-index: 999;
+  left: -11px;
+  top: 10px;
+}
+
+.nav-link:before {
+  display: inline-block;
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: #F2EFEF;
+  border: 1px solid #B7B7B7;
+  border-radius: 10px;
+  /*padding-top: 11px;*/
+  margin-right: 10px;
+  position: absolute;
+  left: -8px;
+  top: 13px;
+  transition: all 0.3s ease-out;
+}
+
+.nav-item:before {
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  content: '';
+  background-color: #BABABA;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  z-index: -1;
+  transition: all 0.5s ease-out;
+}
+
+.nav-item {
+  position: relative;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.nav-item:last-child:before {
+  display: none;
+}
+
+* {
+  color: #393A3D;
 }
 
